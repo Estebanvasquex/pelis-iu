@@ -1,0 +1,751 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+		"name": "Pelis API",
+		"description": "Colección completa para la API de gestión de películas y series",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Géneros",
+			"item": [
+				{
+					"name": "Listar Géneros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/generos",
+							"host": ["{{base_url}}"],
+							"path": ["api", "generos"]
+						}
+					}
+				},
+				{
+					"name": "Obtener Género por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/generos/{{genero_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "generos", "{{genero_id}}"]
+						}
+					}
+				},
+				{
+					"name": "Crear Género - Acción",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Acción\",\n  \"estado\": \"Activo\",\n  \"descripcion\": \"Películas de acción y aventura con escenas emocionantes\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/generos",
+							"host": ["{{base_url}}"],
+							"path": ["api", "generos"]
+						}
+					}
+				},
+				{
+					"name": "Crear Género - Terror",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Terror\",\n  \"estado\": \"Activo\",\n  \"descripcion\": \"Películas de terror y suspenso\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/generos",
+							"host": ["{{base_url}}"],
+							"path": ["api", "generos"]
+						}
+					}
+				},
+				{
+					"name": "Crear Género - Drama",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Drama\",\n  \"estado\": \"Activo\",\n  \"descripcion\": \"Películas dramáticas con historias profundas\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/generos",
+							"host": ["{{base_url}}"],
+							"path": ["api", "generos"]
+						}
+					}
+				},
+				{
+					"name": "Crear Género - Ciencia Ficción",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Ciencia Ficción\",\n  \"estado\": \"Activo\",\n  \"descripcion\": \"Películas de ciencia ficción y tecnología futurista\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/generos",
+							"host": ["{{base_url}}"],
+							"path": ["api", "generos"]
+						}
+					}
+				},
+				{
+					"name": "Crear Género - Aventura",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Aventura\",\n  \"estado\": \"Activo\",\n  \"descripcion\": \"Películas de aventuras y exploración\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/generos",
+							"host": ["{{base_url}}"],
+							"path": ["api", "generos"]
+						}
+					}
+				},
+				{
+					"name": "Actualizar Género",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Acción\",\n  \"estado\": \"Inactivo\",\n  \"descripcion\": \"Descripción actualizada\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/generos/{{genero_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "generos", "{{genero_id}}"]
+						}
+					}
+				},
+				{
+					"name": "Eliminar Género",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/generos/{{genero_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "generos", "{{genero_id}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Directores",
+			"item": [
+				{
+					"name": "Listar Directores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/directores",
+							"host": ["{{base_url}}"],
+							"path": ["api", "directores"]
+						}
+					}
+				},
+				{
+					"name": "Obtener Director por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/directores/{{director_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "directores", "{{director_id}}"]
+						}
+					}
+				},
+				{
+					"name": "Crear Director - Steven Spielberg",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombres\": \"Steven Spielberg\",\n  \"estado\": \"Activo\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/directores",
+							"host": ["{{base_url}}"],
+							"path": ["api", "directores"]
+						}
+					}
+				},
+				{
+					"name": "Crear Director - Christopher Nolan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombres\": \"Christopher Nolan\",\n  \"estado\": \"Activo\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/directores",
+							"host": ["{{base_url}}"],
+							"path": ["api", "directores"]
+						}
+					}
+				},
+				{
+					"name": "Crear Director - Quentin Tarantino",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombres\": \"Quentin Tarantino\",\n  \"estado\": \"Activo\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/directores",
+							"host": ["{{base_url}}"],
+							"path": ["api", "directores"]
+						}
+					}
+				},
+				{
+					"name": "Crear Director - James Cameron",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombres\": \"James Cameron\",\n  \"estado\": \"Activo\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/directores",
+							"host": ["{{base_url}}"],
+							"path": ["api", "directores"]
+						}
+					}
+				},
+				{
+					"name": "Actualizar Director",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombres\": \"Steven Spielberg\",\n  \"estado\": \"Inactivo\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/directores/{{director_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "directores", "{{director_id}}"]
+						}
+					}
+				},
+				{
+					"name": "Eliminar Director",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/directores/{{director_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "directores", "{{director_id}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Productoras",
+			"item": [
+				{
+					"name": "Listar Productoras",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/productoras",
+							"host": ["{{base_url}}"],
+							"path": ["api", "productoras"]
+						}
+					}
+				},
+				{
+					"name": "Obtener Productora por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/productoras/{{productora_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "productoras", "{{productora_id}}"]
+						}
+					}
+				},
+				{
+					"name": "Crear Productora - Disney",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Disney\",\n  \"estado\": \"Activo\",\n  \"slogan\": \"Where Dreams Come True\",\n  \"descripcion\": \"The Walt Disney Company es una de las productoras más grandes del mundo\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/productoras",
+							"host": ["{{base_url}}"],
+							"path": ["api", "productoras"]
+						}
+					}
+				},
+				{
+					"name": "Crear Productora - Warner Bros",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Warner Bros\",\n  \"estado\": \"Activo\",\n  \"slogan\": \"Entertainment for All\",\n  \"descripcion\": \"Warner Bros. Entertainment Inc. es una productora líder en entretenimiento\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/productoras",
+							"host": ["{{base_url}}"],
+							"path": ["api", "productoras"]
+						}
+					}
+				},
+				{
+					"name": "Crear Productora - Paramount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Paramount\",\n  \"estado\": \"Activo\",\n  \"slogan\": \"A Mountain of Entertainment\",\n  \"descripcion\": \"Paramount Pictures Corporation es una de las productoras más antiguas de Hollywood\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/productoras",
+							"host": ["{{base_url}}"],
+							"path": ["api", "productoras"]
+						}
+					}
+				},
+				{
+					"name": "Crear Productora - Universal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Universal Pictures\",\n  \"estado\": \"Activo\",\n  \"slogan\": \"Entertainment for Everyone\",\n  \"descripcion\": \"Universal Pictures es una de las productoras más importantes de la industria\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/productoras",
+							"host": ["{{base_url}}"],
+							"path": ["api", "productoras"]
+						}
+					}
+				},
+				{
+					"name": "Actualizar Productora",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Disney\",\n  \"estado\": \"Inactivo\",\n  \"slogan\": \"Updated Slogan\",\n  \"descripcion\": \"Descripción actualizada\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/productoras/{{productora_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "productoras", "{{productora_id}}"]
+						}
+					}
+				},
+				{
+					"name": "Eliminar Productora",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/productoras/{{productora_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "productoras", "{{productora_id}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Tipos",
+			"item": [
+				{
+					"name": "Listar Tipos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tipos",
+							"host": ["{{base_url}}"],
+							"path": ["api", "tipos"]
+						}
+					}
+				},
+				{
+					"name": "Obtener Tipo por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tipos/{{tipo_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "tipos", "{{tipo_id}}"]
+						}
+					}
+				},
+				{
+					"name": "Crear Tipo - Película",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Película\",\n  \"descripcion\": \"Largometraje cinematográfico\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tipos",
+							"host": ["{{base_url}}"],
+							"path": ["api", "tipos"]
+						}
+					}
+				},
+				{
+					"name": "Crear Tipo - Serie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Serie\",\n  \"descripcion\": \"Serie de televisión con múltiples episodios\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tipos",
+							"host": ["{{base_url}}"],
+							"path": ["api", "tipos"]
+						}
+					}
+				},
+				{
+					"name": "Crear Tipo - Documental",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Documental\",\n  \"descripcion\": \"Documental educativo o informativo\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tipos",
+							"host": ["{{base_url}}"],
+							"path": ["api", "tipos"]
+						}
+					}
+				},
+				{
+					"name": "Actualizar Tipo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Película\",\n  \"descripcion\": \"Descripción actualizada\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tipos/{{tipo_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "tipos", "{{tipo_id}}"]
+						}
+					}
+				},
+				{
+					"name": "Eliminar Tipo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tipos/{{tipo_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "tipos", "{{tipo_id}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Media",
+			"item": [
+				{
+					"name": "Listar Media",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/media",
+							"host": ["{{base_url}}"],
+							"path": ["api", "media"]
+						}
+					}
+				},
+				{
+					"name": "Obtener Media por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/media/{{media_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "media", "{{media_id}}"]
+						}
+					}
+				},
+				{
+					"name": "Crear Media - Jurassic Park",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"serial\": \"PEL-001\",\n  \"titulo\": \"Jurassic Park\",\n  \"sinopsis\": \"Un parque temático con dinosaurios clonados se convierte en una pesadilla cuando los dinosaurios escapan\",\n  \"url\": \"https://example.com/jurassic-park\",\n  \"imagenPortada\": \"https://example.com/images/jurassic-park.jpg\",\n  \"anioEstreno\": 1993,\n  \"genero\": \"{{genero_id}}\",\n  \"director\": \"{{director_id}}\",\n  \"productora\": \"{{productora_id}}\",\n  \"tipo\": \"{{tipo_id}}\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/media",
+							"host": ["{{base_url}}"],
+							"path": ["api", "media"]
+						}
+					}
+				},
+				{
+					"name": "Crear Media - Inception",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"serial\": \"PEL-002\",\n  \"titulo\": \"Inception\",\n  \"sinopsis\": \"Un ladrón que roba secretos corporativos a través del uso de la tecnología de compartir sueños recibe la tarea inversa de plantar una idea\",\n  \"url\": \"https://example.com/inception\",\n  \"imagenPortada\": \"https://example.com/images/inception.jpg\",\n  \"anioEstreno\": 2010,\n  \"genero\": \"{{genero_id}}\",\n  \"director\": \"{{director_id}}\",\n  \"productora\": \"{{productora_id}}\",\n  \"tipo\": \"{{tipo_id}}\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/media",
+							"host": ["{{base_url}}"],
+							"path": ["api", "media"]
+						}
+					}
+				},
+				{
+					"name": "Crear Media - Pulp Fiction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"serial\": \"PEL-003\",\n  \"titulo\": \"Pulp Fiction\",\n  \"sinopsis\": \"Las vidas de dos sicarios, un boxeador, la esposa de un gángster y dos bandidos se entrelazan en cuatro historias de violencia y redención\",\n  \"url\": \"https://example.com/pulp-fiction\",\n  \"imagenPortada\": \"https://example.com/images/pulp-fiction.jpg\",\n  \"anioEstreno\": 1994,\n  \"genero\": \"{{genero_id}}\",\n  \"director\": \"{{director_id}}\",\n  \"productora\": \"{{productora_id}}\",\n  \"tipo\": \"{{tipo_id}}\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/media",
+							"host": ["{{base_url}}"],
+							"path": ["api", "media"]
+						}
+					}
+				},
+				{
+					"name": "Actualizar Media",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"serial\": \"PEL-001\",\n  \"titulo\": \"Jurassic Park - Edición Especial\",\n  \"sinopsis\": \"Sinopsis actualizada del parque jurásico\",\n  \"url\": \"https://example.com/jurassic-park-updated\",\n  \"imagenPortada\": \"https://example.com/images/jurassic-park-new.jpg\",\n  \"anioEstreno\": 1993,\n  \"genero\": \"{{genero_id}}\",\n  \"director\": \"{{director_id}}\",\n  \"productora\": \"{{productora_id}}\",\n  \"tipo\": \"{{tipo_id}}\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/media/{{media_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "media", "{{media_id}}"]
+						}
+					}
+				},
+				{
+					"name": "Eliminar Media",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/media/{{media_id}}",
+							"host": ["{{base_url}}"],
+							"path": ["api", "media", "{{media_id}}"]
+						}
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:4000",
+			"type": "string"
+		},
+		{
+			"key": "genero_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "director_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "productora_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "tipo_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "media_id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

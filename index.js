@@ -12,6 +12,13 @@ app.use(express.json());
 
 getConnection();
 
+// Rutas
+app.use('/api/generos', require('./routes/generos'));
+app.use('/api/directores', require('./routes/directores'));
+app.use('/api/productoras', require('./routes/productoras'));
+app.use('/api/tipos', require('./routes/tipos'));
+app.use('/api/media', require('./routes/media'));
+
 app.listen(port, () => {
   console.log(`--- 🟢 Servidor corriendo en el puerto ${port} ---`);
 });
