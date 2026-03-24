@@ -19,6 +19,11 @@ app.use('/api/productoras', require('./routes/productoras'));
 app.use('/api/tipos', require('./routes/tipos'));
 app.use('/api/media', require('./routes/media'));
 
-app.listen(port, () => {
-  console.log(`--- 🟢 Servidor corriendo en el puerto ${port} ---`);
-});
+// Solo escucha en local, Vercel usa el export
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
+    console.log(`--- 🟢 Servidor corriendo en el puerto ${port} ---`);
+  });
+}
+
+module.exports = app;
