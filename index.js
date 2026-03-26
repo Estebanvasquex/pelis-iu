@@ -10,7 +10,15 @@ const port = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 
-getConnection();
+// En serverless la conexión no persiste, se verifica en cada petición
+app.use(async (req, res, next) => {
+  try {
+    await getConnection();
+    next();
+  } catch (error) {
+    res.status(500).json({ msg: 'Error de conexión a la base de datos' });
+  }
+});
 
 // Rutas
 app.use('/api/generos', require('./routes/generos'));
